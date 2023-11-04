@@ -2,7 +2,13 @@
 
 A simple web application for managing a library collection. You can add, view, search, and remove books by title, author, and ISBN.
 
-![Demo Screenshot](screenshot.png)
+Demo video
+<video controls width="640" height="360">
+  <source src="demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 
 ## Table of Contents
 
