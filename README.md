@@ -2,11 +2,12 @@
 
 A simple web application for managing a library collection. You can add, view, search, and remove books by title, author, and ISBN.
 
-Demo video
-<video controls width="640" height="360">
-  <source src="demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+DEMO SS
+![Screenshot (39)](https://github.com/prabeshsitaula07/LIBRARY-APP/assets/125719283/c6255a68-ec58-43e9-a16f-7d6a4b6c11c2)
+
+![Screenshot (40)](https://github.com/prabeshsitaula07/LIBRARY-APP/assets/125719283/5ae33b50-f156-4cd1-a3d7-45b967020c2a)
+
+
 
 
 
