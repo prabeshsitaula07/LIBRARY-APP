@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+    <h1>Library Management System</h1>
+    <h2>Books in the Library:</h2>
+    <ul>
+        {% for book in books %}
+        <li>{{ book }}
+            <form method="GET" action="/remove_book/{{ book.isbn }}">
+                <input type="submit" value="Remove">
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Add a Book:</h2>
+    <form method="POST" action="/add_book">
+        Title: <input type="text" name="title"><br>
+        Author: <input type="text" name="author"><br>
+        ISBN: <input type="text" name="isbn"><br>
+        <input type="submit" value="Add Book">
+    </form>
+    
+    <h2>Search for Books:</h2>
+    <form method="POST" action="/search">
+        <input type="text" name="query" placeholder="Search by book title or author">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

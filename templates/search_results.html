@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System - Search Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Search Results</h1>
+    <form method="POST" action="/search">
+        <input type="text" name="query" placeholder="Search by book title or author" value="{{ request.form.query }}">
+        <input type="submit" value="Search">
+    </form>
+    <h2>Search Results:</h2>
+    <ul>
+        {% for book in results %}
+        <li>{{ book }}
+            <form method="GET" action="/remove_book/{{ book.isbn }}">
+                <input type="submit" value="Remove">
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
