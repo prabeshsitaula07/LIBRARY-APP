@@ -50,17 +50,22 @@ DEMO SS
 ## Installation
 
 1. Clone the repository:
- https://github.com/prabeshsitaula07/LIBRARY-APP.git
-
+```bash
+ git clone https://github.com/prabeshsitaula07/LIBRARY-APP.git
+````
 2. Change to the project directory:
+```bash
 cd flask-library-management
-
+````
 3. Install the required packages:
+```bash
 pip install -r requirements.txt
+```
 
 4. Run the Flask application:
+```bash
 python app.py
-
+```
 5. Open a web browser and go to [http://localhost:5000/](http://localhost:5000/) to access the application.
 
 ## Contributing
