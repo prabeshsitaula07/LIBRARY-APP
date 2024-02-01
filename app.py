@@ -7,7 +7,8 @@ library = Library()
 
 @app.route('/')
 def index():
-    return render_template('index.html', books=library.books)
+    head_title = request.args.get('head_title', 'Library Management System')
+    return render_template('index.html', books=library.books, head_title=head_title)
 
 @app.route('/add_book', methods=['POST'])
 def add_book():
@@ -28,9 +29,11 @@ def remove_book(isbn):
 
 @app.route('/search', methods=['POST'])
 def search():
+
+    head_title = request.args.get('head_title', 'Searched Books')
     query = request.form.get('query')
     results = library.search(query)
-    return render_template('search_results.html', results=results)
+    return render_template('search_results.html', results=results, head_title=head_title)
 
 if __name__ == "__main__":
     app.run(debug=True)

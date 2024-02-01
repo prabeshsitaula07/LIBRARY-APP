@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Library Management System</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-</head>
-    <h1>Library Management System</h1>
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1>Library Management System</h1>
     <h2>Books in the Library:</h2>
     <ul>
         {% for book in books %}
@@ -29,5 +27,4 @@
         <input type="text" name="query" placeholder="Search by book title or author">
         <input type="submit" value="Search">
     </form>
-</body>
-</html>
+{% endblock %}

@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Library Management System - Search Results</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+{% extends 'layout.html' %}
 
-</head>
+{% block body %}
 <body>
     <h1>Search Results</h1>
     <form method="POST" action="/search">
@@ -21,5 +17,4 @@
         </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}
